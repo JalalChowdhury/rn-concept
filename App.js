@@ -1,21 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+// import GoalInput from './Components/GoalInput/GoalInput';
+import Home from './Pages/Home/Home';
+
+import { StyleSheet, Text, View, AppRegistry, ScrollView } from "react-native";
+import ColorScreen from './Components/ColorScreen/ColorScreen';
+import FlexMama from './Components/FlexMama/FlexMama';
+
+
 
 export default function App() {
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+        <Home></Home>
+        <ColorScreen></ColorScreen>
+        <FlexMama />
+    </ScrollView>
   );
+
+ 
+   
+ 
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
